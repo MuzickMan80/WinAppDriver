@@ -10,7 +10,8 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
-  solution: 'Samples/C#/NotepadAndCalculatorTest/*.sln'
+  solutionName: AlarmClockTest
+  solution: 'Samples/C#/$(solutionName)/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -29,5 +30,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'Samples/C#/NotepadAndCalculatorTest/bin'
+    PathtoPublish: 'Samples/C#/$(solutionName)/bin'
     ArtifactName: 'tests'
