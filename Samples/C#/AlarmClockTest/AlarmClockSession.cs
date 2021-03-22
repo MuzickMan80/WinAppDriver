@@ -25,6 +25,7 @@ namespace AlarmClockTest
     public class AlarmClockSession
     {
         private const string WindowsApplicationDriverUrl = "http://127.0.0.1:4723";
+        // shell:Appsfolder\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App
         private const string AlarmClockAppId = "Microsoft.WindowsAlarms_8wekyb3d8bbwe!App";
 
         protected static WindowsDriver<WindowsElement> session;
@@ -40,6 +41,7 @@ namespace AlarmClockTest
                 // Create a new session to bring up the Alarms & Clock application
                 DesiredCapabilities appCapabilities = new DesiredCapabilities();
                 appCapabilities.SetCapability("app", AlarmClockAppId);
+                appCapabilities.SetCapability("deviceName", "WindowsPC");
                 session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appCapabilities);
                 Assert.IsNotNull(session);
                 Assert.IsNotNull(session.SessionId);
