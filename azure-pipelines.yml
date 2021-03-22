@@ -29,6 +29,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: 'Samples\C#\NotepadAndCalculatorTest\bin\Release\*Test.dll'
+    targetPath: 'Samples/C#/NotepadAndCalculatorTest/**/*.dll'
     artifact: 'tests'
     publishLocation: 'pipeline'
