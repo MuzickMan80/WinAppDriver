@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'WinAppDriver/Samples/C#/NotepadAndCalculatorTest/*.sln'
+  solution: 'Samples/C#/NotepadAndCalculatorTest/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
