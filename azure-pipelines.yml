@@ -29,5 +29,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'Samples/C#/NotepadAndCalculatorTest/**/*.dll'
+    PathtoPublish: 'Samples/C#/NotepadAndCalculatorTest/bin'
     ArtifactName: 'tests'
